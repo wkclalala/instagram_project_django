@@ -3,7 +3,7 @@
 <div class="navbar navbar-default navbar-fixed-top" id="main-nav">
     <div class="container desktop">
         <div class="navbar-header">
-            <a href="{% url 'posts' %}" class="navbar-brand">Aquarius</a>
+            <a href="{% url 'posts' %}" class="navbar-brand">Pets Circle</a>
         </div>
 
         <div id="navbar-main">
@@ -14,11 +14,11 @@
                         <i class="fa fa-home" aria-hidden="true"></i>
                       </a>
                     </li>
-                    <li><a href="{% url 'helloworld' %}"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li><a href="{% url 'Explore' %}"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                     <li><a href="{% url 'Make Post' %}"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
                     <li><a href="{% url 'Detail User' user.id %}"><i class="fa fa-user  %}" aria-hidden="true"></i></a></li>
                     <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-                    <li><a href="{% url 'helloworld' %}"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+                    <!-- <li><a href="{% url 'helloworld' %}"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li> -->
                 {% else %}
                     <li>
                         <a href="{% url 'login' %}">login</a>

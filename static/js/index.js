@@ -124,7 +124,7 @@ function follow_user(success_cb, error_cb, type) {
 
   $.ajax({
     type: "POST",
-    url: '/togglefollow',
+    url: '/toggleFollow',
     data: {
       follow_user_pk: follow_user_pk,
       type: type
@@ -159,10 +159,10 @@ function update_unfollow_view(data) {
 }
 
 
-// $('.follow-toggle__container').on('click', '.follow-user', function() {
-//   follow_user.call(this, update_follow_view, error_cb, 'follow');
-// });
+$('.follow-toggle__container').on('click', '.follow-user', function() {
+  follow_user.call(this, update_follow_view, error_cb, 'follow');
+});
 
-// $('.follow-toggle__container').on('click', '.unfollow-user', function() {
-//   follow_user.call(this, update_unfollow_view, error_cb, 'unfollow');
-// });
+$('.follow-toggle__container').on('click', '.unfollow-user', function() {
+  follow_user.call(this, update_unfollow_view, error_cb, 'unfollow');
+});

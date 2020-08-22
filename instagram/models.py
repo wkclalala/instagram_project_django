@@ -41,6 +41,10 @@ class Post(models.Model):
         blank=True,
         null=True
     )
+    posted_on = models.DateTimeField(
+        auto_now_add=True,
+        editable=False,
+    )
 
     def get_absolute_url(self):
         return reverse("Detail Post", args = [str(self.id)])
@@ -82,3 +86,12 @@ class UserConnection(models.Model):
 
     def __str__(self):
         return self.follower.username + ' follows ' + self.followee.username
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments',)
+    user = models.ForeignKey(instagramUser, on_delete=models.CASCADE)
+    comment = models.CharField(max_length=100)
+    posted_on = models.DateTimeField(auto_now_add=True, editable=False)
+
+    def __str__(self):
+        return self.comment

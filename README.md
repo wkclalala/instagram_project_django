@@ -7,15 +7,16 @@ This is a full stack web application similar to instagram designed by Django usi
   <img src="demo_image/2.png" width="600" title="hover text">
 </div>
 
-<div id="banner">
-  <img src="demo_image/3.png" width="800" title="hover text">
-</div>
+To start with the project, user should firstly give the command:
 
-To start with the project, user should firstly make sure the project is running in the python3 environment and get all the required libraries in the Pipfile installed. 
+<code>django-admin startproject [project_name] [/directory/]</code>
+
+
+And user should also make sure the project is running in the python3 environment and get all the required libraries in the Pipfile installed. 
 
 To start a local server , user should type:
 
-  <code>python3 manage.py runserver</code>
+<code>python3 manage.py runserver</code>
   
   
 To use the default sqlite database for testing, user should use the following command to generate new sqlite database:
@@ -24,5 +25,7 @@ To use the default sqlite database for testing, user should use the following co
 
 <code> python3 manage.py migrate</code> 
 
+To create a superuser as the initial admin, user should use the command:
 
+<code> python3 manage.py createsuperuser</code> 
 
